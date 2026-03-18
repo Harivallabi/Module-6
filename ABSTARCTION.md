@@ -1,44 +1,52 @@
-# Exp.No:28  
-## Abstraction
+## Ex.No:6A Method Overriding
+# AIM
+To write a Python program to demonstrate polymorphism by creating two classes India and USA with the same method names (capital(), language(), and type()) and then accessing them using a common interface.
 
----
+# ALGORITHM
+1.Start the program.
+2.Define the class India with methods capital(), language(), and type().
+3.Define the class USA with the same methods capital(), language(), and type().
+4.Create objects obj_ind for the India class and obj_usa for the USA class.
+5.Use a for loop to iterate through the objects and call the common methods.
+6.Display the output for both countries.
+7.End the program.
+# PROGRAM
+```
+Reg.No: 212222060079
+Name: Harivallabi S
 
-### AIM  
-To write a Python program to define the abstract base class named `Polygon` and also define the abstract method. This base class is inherited by various subclasses. Implement the abstract method in each subclass. Create objects of the subclasses and invoke the `sides()` method.
+class India():
+    
+	def capital(self):
+		print("New Delhi is the capital of India.")
 
----
+	def language(self):
+		print("Hindi is the most widely spoken language of India.")
 
-### ALGORITHM
+	def type(self):
+		print("India is a developing country.")
 
-1. **Start the Program.**
-2. **Import the ABC class** from the `abc` module to implement abstraction.
-3. **Define the abstract base class Polygon**:
-   - Inherit from `ABC` (Abstract Base Class).
-   - Define an abstract method `sides()` with no implementation.
-4. **Define the Triangle class** that inherits from `Polygon`:
-   - Implement the `sides()` method to print `"Triangle has 3 sides"`.
-5. **Define the Pentagon class** that inherits from `Polygon`:
-   - Implement the `sides()` method to print `"Pentagon has 5 sides"`.
-6. **Define the Hexagon class** that inherits from `Polygon`:
-   - Implement the `sides()` method to print `"Hexagon has 6 sides"`.
-7. **Define the Square class** that inherits from `Polygon`:
-   - Implement the `sides()` method to print `"I have 4 sides"`.
-8. **Create an object `t` of the Triangle class** and call the `sides()` method to print the number of sides.
-9. **Create an object `s` of the Square class** and call the `sides()` method to print the number of sides.
-10. **Create an object `p` of the Pentagon class** and call the `sides()` method to print the number of sides.
-11. **Create an object `k` of the Hexagon class** and call the `sides()` method to print the number of sides.
-12. **End the Program.**
+class USA():
+    
+	def capital(self):
+		print("Washington, D.C. is the capital of USA.")
 
----
+	def language(self):
+		print("English is the primary language of USA.")
+	def type(self):
+		print("USA is a developed country.")
 
-### PROGRAM
+obj_ind = India()
+obj_usa = USA()
 
+for country in (obj_ind, obj_usa):
+    country.capital()
+    country.language()
+    country.type()
 ```
 
+# OUTPUT
+<img width="1058" height="276" alt="image" src="https://github.com/user-attachments/assets/2f067652-908f-4027-8336-6d76068cc7b8" />
 
-```
-
-### OUTPUT
-
-
-### RESULT
+# RESULT
+Thus, the program to demonstrate polymorphism using two classes was executed successfully and the output was verified.
